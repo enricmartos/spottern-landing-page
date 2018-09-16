@@ -1,0 +1,1007 @@
+/*Selector del Cos*/
+body {
+	/*Situa els eixos esq/dret dins de l'element div, pq no hi ha hagi overflow horitzontal*/
+	overflow-x:hidden;
+	font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/*Classe usada per text de subtitols i de paragrafs, Gris*/
+.text-muted {
+	color:#777;
+}
+
+/*Color Groc usat a Services pel fons de cada cercle amb les icones damunt*/
+.text-primary {
+	color:#B12A00;
+}
+
+/*Selector dels paragrafs*/
+p {
+	font-size:14px;
+	line-height:1.75; /*Interlineat*/
+}
+
+/*Dins l'etiqueta html p, la classe large, textos llargs com el de Team Section*/
+p.large {
+	font-size:16px;
+}
+
+/*Selector dels enllaços*/
+a,
+a:hover,
+a:focus,
+a:active,
+a.active{
+	outline:0; /*Línia que recobreix la frontera*/
+}
+
+a {
+	color:#B12A00; /*Color taronja normal*/
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+	color:#872000; /*Color taronja fosc*/
+}
+
+/*Selector dels títols t1...t6*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform:uppercase;
+	font-weight:700; /*Nivell de negreta*/
+}
+
+/*Classe per centrar imatges*/
+.img-centered{
+	margin:0 auto;
+}
+
+/*Fons gris molt clar per les seccions de Portfolio i Team,
+ per alternar entre blanc i gris molt clar*/
+.bg-light-gray {
+	background-color:#f7f7f7;
+}
+
+/*No localitzat al fitxer html*/
+.bg-darkest-gray {
+	background-color:#222;
+}
+
+/*CLASSES PELS BUTTONS*/
+
+/*Classe pel btn Close Project dels 6 Modals de la secció Portfolio*/
+.btn-primary {
+	color:#fff;
+	background-color:#B12A00;
+	border-color:#FFF;
+	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary { /*Btn-primary en un menu dropdown*/
+	color:#fff;
+	background-color:#872000;
+	border-color:#FFF; /*Groc fosc*/
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+	background-image:none;
+}
+
+/*Anulada l'etiqueta html de fieldset per agrupar elements btn-primary*/
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+	background-color:#B12A00;
+	border-color:#B12A00;
+}
+
+/*Classe badge per destacar items nous o no llegits*/
+.btn-primary .badge {
+	color:#B12A00;
+	background-color:#fff;
+}
+
+/*2n Tipus de Btn-> BTN-XL Mateix esquema que btn-primary
+1. Tell me more (Header)
+2. Send Message (Contact)*/
+.btn-xl {
+	color:#fff; 
+	background-color:#B12A00;
+	border-color:#FFF;
+	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	border-radius:3px;
+	font-size:18px;
+	padding:20px 40px;
+}
+
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+	color:#fff;
+	background-color:#872000;
+	border-color:#FFF;
+}
+
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+	background-image:none;
+}
+
+.btn-xl.disabled,
+.btn-xl[disabled],
+fieldset[disabled] .btn-xl,
+.btn-xl.disabled:hover,
+.btn-xl[disabled]:hover,
+fieldset[disabled] .btn-xl:hover,
+.btn-xl.disabled:focus,
+.btn-xl[disabled]:focus,
+fieldset[disabled] .btn-xl:focus,
+.btn-xl.disabled:active,
+.btn-xl[disabled]:active,
+fieldset[disabled] .btn-xl:active,
+.btn-xl.disabled.active,
+.btn-xl[disabled].active,
+fieldset[disabled] .btn-xl.active {
+	background-color:#872000;
+	border-color:#FFF;
+}
+
+.btn-xl .badge {
+	color:#B12A00;
+	background-color:#fff;
+}
+
+
+/*NAVBAR
+Quan ens trobem PER SOTA de 768px d'amplada de Viewport->Pixel crític. Props del Navbar*/
+
+
+.navbar-default {
+	background-color:#222; /*Color intern*/
+	border-color:transparent; /*Color de la frontera*/
+}
+
+
+/* Props marca Finanfacil de l'esquerra*/
+/* " "->Descendant selector: L'espai entre dos classes vol dir que
+seleccionar tots els elements de la 2a classe (navbar-brand) continguts 
+dins dels elements de la primera (navbar-default)*/
+.navbar-default .navbar-brand {
+	color:#FFF;
+	font-family: 'Raleway', sans-serif;
+	font-size: 2em;
+    letter-spacing: 1px; /*Separació entre les lletres de cada paraula*/
+}
+
+/*Pseudo-clases per Navbar brand*/
+.navbar-default .navbar-brand:hover, /*Ratolí sobre la marca*/
+.navbar-default .navbar-brand:focus, /*Quan fem un click sobre la marca*/
+.navbar-default .navbar-brand:active, /*Marca (com a enllaç) seleccionada*/
+.navbar-default .navbar-brand.active {
+	color:#FFF;
+}
+
+/*RGBA, on A: alpha-> 0: Totalment transparent, 1: Totalment opac*/
+.navbar-default .navbar-collapse {
+	border-color:rgba(255,255,255,.02);
+}
+
+/*Props de la icona amb 3 barres horitzontals del Collapse*/
+.navbar-default .navbar-toggle {
+	background-color:#D64300;
+	border-color:#D64300;
+}
+
+/*Props de les 3 barres horitzontals de la icona Collapse*/
+.navbar-default .navbar-toggle .icon-bar { /* Quan fem un click sobre la icona Collapse*/
+	background-color:#fff;
+}
+
+.navbar-default .navbar-toggle:hover, /*Ratolí sobre la icona Collapse*/
+.navbar-default .navbar-toggle:focus {  /* Quan fem un click sobre la icona Collapse*/
+	background-color:#D64300;
+}
+
+/*Props de les opcions del navbar*/
+.navbar-default .nav li a {
+	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform:uppercase; /*Majuscula*/
+	font-weight:400; /*Negreta*/
+	letter-spacing:1px; /*Separació entre les lletres de cada paraula*/
+	color:#fff;
+}
+
+/*Quan ens col·loquem sobre les opcions del menú només, roman blanc*/
+.navbar-default .nav li a:hover, /*Ratolí sobre les opcions del Navbar*/
+.navbar-default .nav li a:focus { /*Quan fem click sobre les opcions del navbar*/
+	color:#FFF;
+	outline:0;
+}
+
+/* ">": Child selector: Selecciona tots els elements que son fills immediats
+d'un determinat element.*/
+
+/*Recobriment de les opcions del menú quan fem scroll sense que col·loquem el ratolí sobre aquestes - Blau Clar*/
+
+.navbar-default .navbar-nav>.active>a {
+	border-radius:0;
+	color:#fff;
+	background-color:#D64300;
+}
+
+/*Recobriment de les opcions del menú quan fem scroll i col·loquem el ratolí sobre aquestes - Blau Fosc*/
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+	color:#fff;
+	background-color:#D64300;
+}
+
+@media (min-width:768px){
+	/*Quan ens trobem IGUAL O PER SOBRE de 768px d'amplada de Viewport->Pixel crític. Props del navbar*/
+    /*Props Navbar Sense haver fet scroll*/
+	.navbar-default {
+		background-color:transparent;
+		padding:25px 0;
+		/*CSS3 Transitions
+        Suport dels navegadors: -webkit-: Google Chrome & Safari, -moz-: Firefox;
+        transition: property, duration
+        http://www.w3schools.com/css/css3_transitions.asp */
+		-webkit-transition:padding .3s;
+		-moz-transition:padding .3s;
+		transition:padding .3s;
+		border:0;
+	}
+	/*Efecte de les transicions en la Marca Finanfácil + mida de la font*/
+	.navbar-default .navbar-brand {
+		font-size:3em;
+		-webkit-transition:all .3s;
+		-moz-transition:all .3s;
+		transition:all .3s
+	}
+	.navbar-default .navbar-nav>.active>a {
+		border-radius:3px;
+	}
+
+	/*Props Navbar havent fet scroll*/
+
+	.navbar-default.navbar-shrink {
+		background-color:#222;
+		padding:10px 0;
+	}
+
+	/*Mida de la marca Finanfacil amb el navbar havent fet scroll*/
+	.navbar-default.navbar-shrink .navbar-brand {
+		font-size:2em;
+	}
+}
+
+/*Selector de l'etiqueta Header*/
+/*Quan ens trobem PER SOTA de 768px d'amplada de Viewport->Pixel crític. Props del Header*/
+
+header {
+	background-image:url(../img/header-bg.jpg); /*Imatge de fons del header*/
+	background-repeat:none; /*Diu si el fons s'ha d'anar repetint successivament per tota la pàgina*/
+	/*Background-attachment: Diu si la imatge de fons és fixa o fa scroll amb la resta de la pàgina;*/
+	background-attachment:scroll;
+	background-position:center center; /*Posicio central*/
+	-webkit-background-size:cover; /*Mida de la imatge de fons, tipus portada, 
+    mostra la imatge sense retallar-la i proporcional Google Chrome& Safari*/
+	-moz-background-size:cover; /*Firefox*/
+	background-size:cover;
+	-o-background-size:cover; /*Opera*/
+	text-align:center;
+	color:#fff;
+}
+
+/*Abans de tot text (Del Bienvenido a) o Welcome To Studio*/
+header .intro-text {
+	padding-top:100px;
+	padding-bottom:50px;
+}
+
+/*TEXT DEL HEADER*/
+
+/*Estil de Bienvenido a o Welcome To Studio*/
+header .intro-text .intro-lead-in {
+	font-family:"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-style:italic;
+	font-size:22px;
+	line-height:22px;
+	margin-bottom:20px;
+}
+
+/*Estil de Finanfácil*/
+header .intro-text .intro-lead-after {
+    margin-bottom: 25px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.5em;
+    line-height: 22px;
+}
+
+/*Linia de separacio entre Títol i subtítol del header*/
+hr {
+  margin-top: 0px;
+  border-color: #872000; /*Color del separador*/
+  border-width: 2px; /*Gruix del separador*/
+  max-width: 25px; /*Amplada del separador*/
+}
+
+
+header .intro-text .intro-heading {
+	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	/*text-transform:uppercase;*/
+	font-weight:0;
+	font-size:50px;
+	line-height:50px;
+	margin-bottom:25px;
+}
+
+/*Quan ens trobem IGUAL O PER SOBRE de 768px d'amplada de Viewport->Pixel crític. Props del Header*/
+@media (min-width:768px){
+	header .intro-text {
+		padding-top:150px;
+		padding-bottom:200px
+	}
+
+	header .intro-text .intro-lead-in{
+		font-family:"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-style:italic;
+		font-size:40px;
+		line-height:40px;
+		margin-bottom:40px
+	}
+
+	header .intro-text .intro-lead-after {
+        margin-bottom: 25px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 6em;
+        line-height: 22px;
+}
+
+/*Linia de separacio entre Títol i subtítol del header*/
+    hr {
+      margin-top: 40px;
+      border-color: #872000;
+      border-width: 3px;
+      max-width: 50px;
+    }
+
+    hr.light {
+      border-color: white;
+    }
+
+	header .intro-text .intro-heading{
+		font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		/*text-transform:uppercase;*/
+		font-weight:0;
+		font-size:2em;
+		line-height:75px;
+		margin-bottom:50px
+	}
+}
+
+/* Selector de l'etiqueta Section*/
+
+/* MENOR DE 768px en horitzontal
+section{
+	padding:100px 0;
+}
+
+/*Per els títols-> h2 i classe section-heading
+P.e. Secció Services, el títol de services i els 3 títols dels 3 serveis*/
+section h2.section-heading{
+	font-size:40px;
+	margin-top:0;
+	margin-bottom:15px;
+}
+
+/*Per els Subtítols-> h2 i classe section-subheading
+P.e. Secció Services, el subtítol del títol Services*/
+section h3.section-subheading{
+	font-size:16px;
+	font-family:"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform:none;
+	font-style:italic; /*Cursiva*/
+	font-weight:400;
+	margin-bottom:75px;
+}
+/* MÉS GRAN o Igual a 768px en horitzontal-> + padding*/
+@media (min-width:768px){
+	section{
+		padding:100px 0;
+		}
+}
+
+/*Classe pels 3 títols dels 3 serveis a la Secció Services*/
+.service-heading{
+	margin:15px 0;
+	text-transform:none;
+}
+
+/*Selector per ID = Portfolio de la Secció Portfolio*/
+
+/*Props comunes de cada projecte*/
+/*Marge bottom de 15px entre portfolis*/
+#portfolio .portfolio-item{
+	margin:0 0 15px;
+	right:0;
+}
+
+/*Capses dels portfolios abans d'obrir els modals*/
+#portfolio .portfolio-item .portfolio-link{
+	/* La prop display especifica el tipus de capsa usada per un element html*/
+	display:block;
+	position:relative;
+	max-width:400px;
+	margin:0 auto;
+}
+
+/*Classe per quan coloquem el ratoló sobre les capses dels portfolios*/
+#portfolio .portfolio-item .portfolio-link .portfolio-hover{
+	background:rgba(214,67,0,.9); /*To groguenc de seleccionat*/
+	position:absolute;
+	/*El cobriment ocupa tota la superficie*/
+	width:100%;
+	height:100%;
+	opacity:0; /*Si estigués a 1 sempre estaria opac de color groc*/
+	/*Transició/Efecte de començament lent*/
+	transition:all ease .5s;
+	-webkit-transition:all ease .5s;
+	-moz-transition:all ease .5s;
+}
+
+/*	Quan ens mantenim amb el ratolí sobre la opció del portfoli*/
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover{
+	opacity:1;
+}
+
+/*El contingut de les capses quan tenim el ratolí a sobre és un signe positiu,
+ indicant que per ampliar la info s'ha de premer el +*/
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content{
+	position:absolute;
+	/*El signe està centrat dins la capsa*/
+	width:100%;
+	height:20px;
+	font-size:20px;
+	text-align:center;
+	top:50%;
+	margin-top:-12px;
+	color:#fff;
+}
+
+/*Selector per l'etiqueta i html que representa el signe + fa-plus*/
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i{
+	margin-top:-12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4{
+	margin:0;
+}
+
+/*Props del títol h4 i el text p del peu de la capsa del portfoli*/
+#portfolio .portfolio-item .portfolio-caption{
+	max-width:400px;
+	margin:0 auto;
+	background-color:#fff;
+	text-align:center;
+	padding:25px;
+}
+
+/*Props del títol h4 del portfoli*/
+#portfolio .portfolio-item .portfolio-caption h4{
+	text-transform:none;
+	margin:0;
+}
+
+/*Props del text p del portfoli*/
+#portfolio .portfolio-item .portfolio-caption p{
+	font-family:"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-style:italic;
+	font-size:16px;
+	margin:0;
+}
+
+/*Superposició d'elements: reduïda*/;
+#portfolio *{
+	z-index:2;
+}
+
+/*Marge dret de 30px entre portfolis, major que en pantalla petita*/
+@media (min-width:767px){
+
+	#portfolio .portfolio-item{
+		margin:0 0 30px;
+	}
+}
+
+.timeline {
+	list-style:none;
+	padding:0;
+	position:relative;
+}
+
+.timeline:before{
+	top:0;
+	bottom:0;
+	position:absolute;
+	content:"";
+	width:2px;
+	background-color:#f1f1f1;
+	left:40px;
+	margin-left:-1.5px;
+}
+
+.timeline>li{
+	margin-bottom:50px;
+	position:relative;
+	min-height:50px;
+}
+
+.timeline>li:before,
+.timeline>li:after{
+	content:" ";
+	display:table;
+}
+
+.timeline>li:after{
+	clear:both
+}
+
+.timeline>li .timeline-panel{
+	width:100%;
+	float:right;
+	padding:0 20px 0 100px;
+	position:relative;
+	text-align:left;
+}
+
+.timeline>li .timeline-panel:before{
+	border-left-width:0;
+	border-right-width:15px;
+	left:-15px;
+	right:auto;
+}
+
+.timeline>li .timeline-panel:after{
+	border-left-width:0;
+	border-right-width:14px;
+	left:-14px;
+	right:auto;
+}
+
+.timeline>li .timeline-image {
+	left:0;
+	margin-left:0;
+	width:80px;
+	height:80px;
+	position:absolute;
+	z-index:100;
+	background-color:#D64300;
+	color:#fff;
+	border-radius:100%;
+	border:7px solid #f1f1f1;
+	text-align:center;
+}
+
+.timeline>li .timeline-image h4{
+	font-size:10px;
+	margin-top:12px;
+	line-height:14px;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel{
+	float:right;
+	text-align:left;
+	padding:0 20px 0 100px;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:before{
+	border-left-width:0;
+	border-right-width:15px;
+	left:-15px;right:auto;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:after{
+	border-left-width:0;
+	border-right-width:14px;
+	left:-14px;
+	right:auto;
+}
+
+.timeline>li:last-child{margin-bottom:0}.timeline .timeline-heading h4{
+	margin-top:0;
+	color:inherit;
+}
+
+.timeline .timeline-heading h4.subheading{
+	text-transform:none;
+}
+
+.timeline .timeline-body>p,
+.timeline .timeline-body>ul{
+	margin-bottom:0;
+}
+
+@media (min-width:768px){
+	.timeline:before{
+		left:50%;
+	}
+	.timeline>li{
+		margin-bottom:100px;
+		min-height:100px;
+	}
+
+	.timeline>li .timeline-panel{
+		width:41%;
+		float:left;
+		padding:0 20px 20px 30px;
+		text-align:right;
+	}
+
+	.timeline>li .timeline-image{
+		width:100px;
+		height:100px;
+		left:50%;
+		margin-left:-50px;
+	}
+
+	.timeline>li .timeline-image h4{
+		font-size:13px;
+		margin-top:16px;
+		line-height:18px
+	}
+
+	.timeline>li.timeline-inverted>.timeline-panel{
+		float:right;
+		text-align:left;
+		padding:0 30px 20px 20px;
+	}
+}
+
+@media (min-width:992px){
+	.timeline>li{
+		min-height:150px;
+	}
+
+	.timeline>li .timeline-panel{
+		padding:0 20px 20px;
+	}
+	.timeline>li .timeline-image{
+		width:150px;
+		height:150px;
+		margin-left:-75px;
+	}
+
+	.timeline>li .timeline-image h4{
+		font-size:18px;
+		margin-top:30px;
+		line-height:26px;
+	}
+
+	.timeline>li.timeline-inverted>.timeline-panel{
+		padding:0 20px 20px;
+	}
+}
+
+@media (min-width:1200px){
+	.timeline>li{
+		min-height:170px;
+	}
+	.timeline>li .timeline-panel{
+		padding:0 20px 20px 100px;
+	}
+	.timeline>li .timeline-image{
+		width:170px;
+		height:170px;
+		margin-left:-85px;
+	}
+	.timeline>li .timeline-image h4{
+		margin-top:40px;
+	}
+
+	.timeline>li.timeline-inverted>.timeline-panel{
+		padding:0 100px 20px 20px
+	}
+}
+
+.team-member{
+	text-align:center;
+	margin-bottom:50px;
+}
+
+.team-member img{
+	margin:0 auto;
+	border:7px solid #fff;
+}
+.team-member h4{
+	margin-top:25px;
+	margin-bottom:0;
+	text-transform:none;
+}
+
+.team-member p{
+	margin-top:0;
+}
+
+aside.clients img{
+	margin:50px auto;
+}
+
+section#contact{
+	background-color:#222;
+	background-image:url(../img/map-image.png);
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+section#contact .section-heading{
+	color:#fff;
+}
+
+section#contact .form-group{
+	margin-bottom:25px;
+}
+
+section#contact .form-group input,
+section#contact .form-group textarea{
+	padding:20px;
+}
+
+section#contact .form-group input.form-control{
+	height:auto;
+}
+
+section#contact .form-group textarea.form-control{
+	height:236px;
+}
+
+section#contact .form-control:focus{
+	border-color:#B12A00;
+	box-shadow:none;
+}
+
+section#contact ::
+-webkit-input-placeholder{
+	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	color:#bbb;
+}
+
+section#contact :-moz-placeholder{
+	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	color:#bbb;
+}
+
+section#contact ::
+-moz-placeholder{
+	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	color:#bbb;
+}
+
+section#contact :
+-ms-input-placeholder{
+	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	color:#bbb;
+}
+
+section#contact .text-danger{
+	color:#e74c3c;
+}
+
+footer{
+	padding:25px 0;
+	text-align:center;
+}
+
+footer span.copyright{
+	line-height:40px;
+	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform:uppercase;
+	text-transform:none;
+}
+
+footer ul.quicklinks{
+	margin-bottom:0;
+	line-height:40px;
+	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform:uppercase;
+	text-transform:none;
+}
+
+ul.social-buttons{
+	margin-bottom:0;
+}
+
+ul.social-buttons li a{
+	display:block;
+	background-color:#222;
+	height:40px;
+	width:40px;
+	border-radius:100%;
+	font-size:20px;
+	line-height:40px;
+	color:#fff;
+	outline:0;
+	-webkit-transition:all .3s;
+	-moz-transition:all .3s;
+	transition:all .3s;
+}
+
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active{
+	background-color:#D64300;
+}
+
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn:active:focus{
+	outline:0;
+}
+
+.portfolio-modal .modal-content{
+	border-radius:0;
+	background-clip:border-box;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+	border:0;
+	min-height:100%;
+	padding:100px 0;
+	text-align:center;
+}
+
+.portfolio-modal .modal-content h2{
+	margin-bottom:15px;
+	font-size:3em;
+}
+
+.portfolio-modal .modal-content p{
+	margin-bottom:30px;
+}
+
+.portfolio-modal .modal-content p.item-intro{
+	margin:20px 0 30px;
+	font-family:"Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-style:italic;
+	font-size:16px;
+}
+
+.portfolio-modal .modal-content ul.list-inline{
+	margin-bottom:30px;
+	margin-top:0;
+}
+
+.portfolio-modal .modal-content img{
+	margin-bottom:30px;
+}
+
+.portfolio-modal .close-modal{
+	position:absolute;
+	width:75px;
+	height:75px;
+	background-color:transparent;
+	top:25px;
+	right:25px;
+	cursor:pointer;
+}
+
+.portfolio-modal .close-modal:hover{
+	opacity:.3;
+}
+.portfolio-modal .close-modal .lr{
+	height:75px;
+	width:1px;
+	margin-left:35px;
+	background-color:#222;
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	z-index:1051
+}
+
+.portfolio-modal .close-modal .lr .rl{
+	height:75px;
+	width:1px;
+	background-color:#222;
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	z-index:1052
+}
+
+.portfolio-modal .modal-backdrop{
+	opacity:0;
+	display:none;
+}
+
+::-moz-selection{
+	text-shadow:none;
+	background:#D64300;
+}
+
+::selection{
+	text-shadow:none;
+	background:#D64300;
+}
+
+img::selection{
+	background:0 0;
+}
+
+img::-moz-selection{
+	background:0 0;
+}
+
+body{
+	webkit-tap-highlight-color:#D64300;
+}
+
+/*Classes noves per Aviso Legal*/
+.plata {
+    color: #B5B8BA;
+}
+
+#p-mitja {
+    font-size: 16px;
+    text-align: justify;
+}
+
+
+/*Classes thumbnail prescindides, al amplia es visualitza la poca qualitat
+de la imatge de l'avís legal*/
+
+.green {
+    color: #9DC828;
+}
+
+.red {
+	color: #EB3E31;
+}
+
+
+
+.marge-suau {
+    border-radius: 10px;
+}
