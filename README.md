@@ -2,6 +2,6 @@
 
 This project aims to create a landing page using [Agency](http://startbootstrap.com/template-overviews/agency/), which is a one page agency portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, a responsive timeline, and so on. 
 
-Please note that the filling and sending the contact form will not generate any effect, since there is no backend implementation for this project. Therefore, the programming languages involved here are just HTML and CSS. 
+Please note that filling and sending the contact form will not generate any effect, since there is no backend implementation for this project. Therefore, the programming languages involved here are just HTML and CSS. 
 
 Take look at the final result here: https://enricmartos.github.io/spottern-landing-page
