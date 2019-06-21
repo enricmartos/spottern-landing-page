@@ -5,3 +5,7 @@ This project aims to create a landing page using [Agency](http://startbootstrap.
 Please note that filling and sending the contact form will not generate any effect, since there is no backend implementation for this project. Therefore, the programming languages involved here are just HTML and CSS. 
 
 Take look at the final result here: https://enricmartos.github.io/spottern-landing-page
+
+## Deploy with Kubernetes
+
+The docker image enricmartos/sporttern-landing-page is currently available on Docker Hub. Also, this static page has been deployed with Kubernetes (GCP). You can find it here: http://35.233.138.81/ 
