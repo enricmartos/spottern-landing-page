@@ -8,4 +8,4 @@ Take look at the final result here: https://enricmartos.github.io/spottern-landi
 
 ## Deploy with Kubernetes
 
-The docker image enricmartos/sporttern-landing-page is currently available on Docker Hub. Also, this static page has been deployed with Kubernetes (GCP). You can find it here: http://35.233.138.81/ 
+The docker image [enricmartos/sporttern-landing-page](https://cloud.docker.com/repository/docker/enricmartos/spottern-landing-page/) is currently available on Docker Hub. Also, this static page has been deployed with Kubernetes (GCP). You can find it here: http://35.233.138.81/ 
