@@ -27,3 +27,8 @@ $ docker run -p 8000:80 -i spottern-landing-page
 
 ```
 - Open your browser and test the application on *localhost:8000*
+
+## References
+
+- [heroku-docker-nginx-example](https://elements.heroku.com/buttons/rjoonas/heroku-docker-nginx-example)
+- [Serve static files from docker via nginx](https://www.linkedin.com/pulse/serve-static-files-from-docker-via-nginx-basic-example-arun-kumar/) 
