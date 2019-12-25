@@ -26,10 +26,10 @@ jobs:
         docker push enricmartos/spottern-landing-page:latest
         echo 'Done!'
         docker build -t spottern-landing-page .
-      - name: push docker image to heroku
-        env:
-          HEROKU: ${{ secrets.DOCKER_HUB }}
-          HEROKU_KEY: ${{ secrets.DOCKER_HUB_KEY }}
+    - name: push docker image to heroku
+      env:
+        HEROKU: ${{ secrets.DOCKER_HUB }}
+        HEROKU_KEY: ${{ secrets.DOCKER_HUB_KEY }}
       run: |
         echo 'Heroku login'
         heroku login -u $HEROKU -p $HEROKU_KEY
