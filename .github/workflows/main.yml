@@ -39,6 +39,7 @@ jobs:
         git remote add heroku https://git.heroku.com/spottern-landing-page.git
         git remote -v
         git config user.email "enric.martos@gmail.com"
+        git config --global user.name "Enric"
         git add .
         git commit -m "fix pushing to heroku git repo"
         git push heroku master
