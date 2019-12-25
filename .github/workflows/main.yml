@@ -32,10 +32,8 @@ jobs:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: |
         echo 'Set up Heroku Oauth based on the api key'
-        echo 'heroku env var: $HEROKU'
-        echo 'heroku_api_key env var: $HEROKU_API_KEY'
         echo "machine api.heroku.com  login $HEROKU  password $HEROKU_API_KEY machine git.heroku.com  login $HEROKU  password $HEROKU_API_KEY" > ~/.netrc
         cat ~/.netrc
-        echo 'Pushing image to Heroku...'
-        git pull origin master
-        git push heroku master 
+        echo 'Debug pushing image to Heroku...'
+        echo $PWD
+        git remote -v
