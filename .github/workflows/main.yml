@@ -28,10 +28,10 @@ jobs:
         docker build -t spottern-landing-page .
     - name: push docker image to heroku
       env:
-        HEROKU: ${{ secrets.DOCKER_HUB }}
-        HEROKU_KEY: ${{ secrets.DOCKER_HUB_KEY }}
+        HEROKU: ${{ secrets.HEROKU }}
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: |
-        echo 'Heroku login'
-        heroku login -u $HEROKU -p $HEROKU_KEY
+        echo 'Set up Heroku Oauth based on the api key'
+        echo "machine api.heroku.com  login $HEROKU  password $HEROKU_API_KEY machine git.heroku.com  login $HEROKU  password $HEROKU_API_KEY" > ~/.netrc
         echo 'Pushing image to Heroku...'
         git push heroku master 
