@@ -33,14 +33,13 @@ jobs:
       run: |
         echo 'Set up Heroku Oauth based on the api key'
         echo "machine api.heroku.com  login $HEROKU  password $HEROKU_API_KEY machine git.heroku.com  login $HEROKU  password $HEROKU_API_KEY" > ~/.netrc
-        cat ~/.netrc
         echo 'Debug pushing image to Heroku...'
         echo $PWD
         git remote add heroku https://git.heroku.com/spottern-landing-page.git
         git remote -v
         git config user.email "enric.martos@gmail.com"
         git config --global user.name "Enric"
-        git checkout master
-        git add .
-        git commit -m "fix pushing to heroku git repo"
+        # git checkout master
+        # git add .
+        # git commit -m "fix pushing to heroku git repo"
         git push heroku master
