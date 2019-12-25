@@ -37,4 +37,6 @@ jobs:
         echo "machine api.heroku.com  login $HEROKU  password $HEROKU_API_KEY machine git.heroku.com  login $HEROKU  password $HEROKU_API_KEY" > ~/.netrc
         cat ~/.netrc
         echo 'Pushing image to Heroku...'
+        git add .
+        git commit -m "Fix failed push"
         git push heroku master 
