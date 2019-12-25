@@ -40,7 +40,7 @@ jobs:
         git remote -v
         git config user.email "enric.martos@gmail.com"
         git config --global user.name "Enric"
-        git checkout heroku master
+        git checkout master
         git add .
         git commit -m "fix pushing to heroku git repo"
         git push heroku master
