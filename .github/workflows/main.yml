@@ -38,3 +38,6 @@ jobs:
         echo $PWD
         git remote add heroku https://git.heroku.com/spottern-landing-page.git
         git remote -v
+        git add .
+        git commit -m "fix pushing to heroku git repo"
+        git push heroku master
