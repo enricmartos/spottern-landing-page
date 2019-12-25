@@ -30,7 +30,7 @@ jobs:
         env:
           HEROKU: ${{ secrets.DOCKER_HUB }}
           HEROKU_KEY: ${{ secrets.DOCKER_HUB_KEY }}
-      run:
+      run: |
         echo 'Heroku login'
         heroku login -u $HEROKU -p $HEROKU_KEY
         echo 'Pushing image to Heroku...'
