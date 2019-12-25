@@ -36,4 +36,5 @@ jobs:
         cat ~/.netrc
         echo 'Debug pushing image to Heroku...'
         echo $PWD
+        git remote add heroku https://git.heroku.com/spottern-landing-page.git
         git remote -v
