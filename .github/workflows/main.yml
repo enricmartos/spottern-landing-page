@@ -31,4 +31,7 @@ jobs:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         HEROKU: "spottern-landing-page"
       if: github.ref == 'refs/heads/master' && job.status == 'success'
-      run: git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master
+      run: |
+        echo 'Set up Heroku Oauth based on the api key'
+        echo "machine api.heroku.com  login $HEROKU  password $HEROKU_API_KEY machine git.heroku.com  login $HEROKU  password $HEROKU_API_KEY" > ~/.netrc
+        git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master
