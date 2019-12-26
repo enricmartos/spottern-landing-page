@@ -26,20 +26,9 @@ jobs:
         docker push enricmartos/spottern-landing-page:latest
         echo 'Done!'
         docker build -t spottern-landing-page .
-    - name: push docker image to heroku
+    - name: Deploy to Heroku
       env:
-        HEROKU: ${{ secrets.HEROKU }}
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: |
-        echo 'Set up Heroku Oauth based on the api key'
-        echo "machine api.heroku.com  login $HEROKU  password $HEROKU_API_KEY machine git.heroku.com  login $HEROKU  password $HEROKU_API_KEY" > ~/.netrc
-        echo 'Debug pushing image to Heroku...'
-        echo $PWD
-        git remote add heroku https://git.heroku.com/spottern-landing-page.git
-        git remote -v
-        git config user.email "enric.martos@gmail.com"
-        git config --global user.name "Enric"
-        # git checkout master
-        # git add .
-        # git commit -m "fix pushing to heroku git repo"
-        git push heroku HEAD:master
+        HEROKU: "spottern-landing-page"
+      if: github.ref == 'refs/heads/master' && job.status == 'success'
+      run: git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master
