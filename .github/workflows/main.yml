@@ -24,6 +24,5 @@ jobs:
               login $HEROKU_EMAIL
               password $HEROKU_API_KEY
           EOF
-      - run: heroku git:remote -a $(basename ${{ github.repository}} )
-      - run: git pull heroku HEAD:refs/heads/master
+      - run: git remote add heroku https://git.heroku.com/spottern-landing-page.git
       - run: git push heroku HEAD:refs/heads/master
