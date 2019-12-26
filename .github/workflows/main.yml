@@ -28,6 +28,7 @@ jobs:
         echo 'Done!'
         docker build -t spottern-landing-page .
     - name: deploy to heroku
+    - uses: actions/checkout@v1
       env:
         HEROKU_APP_NAME: spottern-landing-page
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
