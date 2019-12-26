@@ -9,6 +9,7 @@ jobs:
    
   release:
     env:
+      HEROKU_APP_NAME: spottern-landing-page
       HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
     runs-on: ubuntu-latest
@@ -25,4 +26,6 @@ jobs:
               password $HEROKU_API_KEY
           EOF
       - run: heroku git:remote -a $(basename ${{ github.repository}} )
-      - run: git push heroku HEAD:refs/heads/master
+#       - run: git push heroku HEAD:refs/heads/master
+      - run: heroku container:push web --app $HEROKU_APP_NAME
+      - run: heroku container:release web --app $HEROKU_APP_NAME
