@@ -26,6 +26,4 @@ jobs:
               password $HEROKU_API_KEY
           EOF
       - run: heroku git:remote -a $(basename ${{ github.repository}} )
-#       - run: git push heroku HEAD:refs/heads/master
-      - run: heroku container:push web --app $HEROKU_APP_NAME
-      - run: heroku container:release web --app $HEROKU_APP_NAME
+      - run: git push heroku HEAD:refs/heads/master
