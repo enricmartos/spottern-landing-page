@@ -27,7 +27,6 @@ The workflow defined in [main.yml](https://github.com/enricmartos/spottern-landi
 # Build and run the docker image with docker-compose
 
 $ docker-compose -f docker-compose-test.yml up
-
 ```
 - Open your browser and test the application on *localhost:8000*
 
@@ -35,4 +34,4 @@ $ docker-compose -f docker-compose-test.yml up
 
 - [heroku-docker-nginx-example](https://elements.heroku.com/buttons/rjoonas/heroku-docker-nginx-example)
 - [Serve static files from docker via nginx](https://www.linkedin.com/pulse/serve-static-files-from-docker-via-nginx-basic-example-arun-kumar/) 
-- (Using GitHub Actions to Create a Simple Test and Release Pipeline for a Phoenix App)[https://medium.com/@katestudwell/using-github-actions-to-create-a-simple-test-and-release-pipeline-for-phoenix-app-d0d65feed4ed]
+- [Using GitHub Actions to Create a Simple Test and Release Pipeline for a Phoenix App](https://medium.com/@katestudwell/using-github-actions-to-create-a-simple-test-and-release-pipeline-for-phoenix-app-d0d65feed4ed)
