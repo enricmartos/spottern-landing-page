@@ -8,7 +8,14 @@ Take look at the final result here: https://enricmartos.github.io/spottern-landi
 
 ## Deploy with Heroku
 
-The docker image [enricmartos/sporttern-landing-page](https://cloud.docker.com/repository/docker/enricmartos/spottern-landing-page/) is currently available on Docker Hub. Also, this static page has been deployed with Heroku. You can find it here: https://spottern-landing-page.herokuapp.com/ 
+The docker image [enricmartos/sporttern-landing-page]https://hub.docker.com/repository/docker/enricmartos/spottern-landing-page/) is currently available on Docker Hub. Also, this static page has been deployed with Heroku. You can find it here: https://spottern-landing-page.herokuapp.com/ 
+
+## CI with GitHub Actions
+
+The workflow defined in [main.yml](https://github.com/enricmartos/spottern-landing-page/blob/master/.github/workflows/main.yml) consists of two jobs:
+
+- docker_hub_release: Build and push the docker image to Docker Hub registry
+- heroku_release: Deploy the master branch to Heroku 
 
 ## Build setup
 
@@ -17,13 +24,9 @@ The docker image [enricmartos/sporttern-landing-page](https://cloud.docker.com/r
 - Clone this repo to your local machine
 
 ```
-# Build docker image
+# Build and run the docker image with docker-compose
 
-$ docker build -f Dockerfile-test -t spottern-landing-page .
-
-# Run docker image
-
-$ docker run -p 8000:80 -i spottern-landing-page
+$ docker-compose -f docker-compose-test.yml up
 
 ```
 - Open your browser and test the application on *localhost:8000*
