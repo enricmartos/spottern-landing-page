@@ -12,9 +12,9 @@ The docker image [enricmartos/sporttern-landing-page]https://hub.docker.com/repo
 
 ## CI with GitHub Actions
 
-The workflow defined in [main.yml](https://github.com/enricmartos/spottern-landing-page/blob/master/.github/workflows/main.yml) consists of two jobs:
+The workflow defined in [main.yml](https://github.com/enricmartos/spottern-landing-page/blob/master/.github/workflows/main.yml) consists of two jobs that are triggered on every push to the master branch:
 
-- docker_hub_release: Build and push the docker image to Docker Hub registry
+- docker_hub_release: Build and push the docker image to Docker Hub registry. The previous [Automated Build](https://docs.docker.com/docker-hub/builds/) has been removed since now the push is included in this job.
 - heroku_release: Deploy the master branch to Heroku 
 
 ## Build setup
