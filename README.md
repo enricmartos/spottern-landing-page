@@ -35,3 +35,4 @@ $ docker-compose -f docker-compose-test.yml up
 
 - [heroku-docker-nginx-example](https://elements.heroku.com/buttons/rjoonas/heroku-docker-nginx-example)
 - [Serve static files from docker via nginx](https://www.linkedin.com/pulse/serve-static-files-from-docker-via-nginx-basic-example-arun-kumar/) 
+- (Using GitHub Actions to Create a Simple Test and Release Pipeline for a Phoenix App)[https://medium.com/@katestudwell/using-github-actions-to-create-a-simple-test-and-release-pipeline-for-phoenix-app-d0d65feed4ed]
