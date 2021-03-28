@@ -8,7 +8,7 @@ Take look at the final result here: https://enricmartos.github.io/spottern-landi
 
 ## Deploy with Heroku
 
-The docker image [enricmartos/sporttern-landing-page](https://hub.docker.com/repository/docker/enricmartos/spottern-landing-page/) is currently available on Docker Hub. Also, this static page has been deployed with Heroku. You can find it here: https://spottern-landing-page.herokuapp.com/ 
+The docker image [enricmartos/spottern-landing-page](https://hub.docker.com/repository/docker/enricmartos/spottern-landing-page/) is currently available on Docker Hub. Also, this static page has been deployed with Heroku. You can find it here: https://spottern-landing-page.herokuapp.com/ 
 
 ## CI with GitHub Actions
 
